@@ -28,21 +28,6 @@ pipeline:
   - name: FallbackClassifier
     threshold: 0.3
     ambiguity_threshold: 0.1
-  - name: "DucklingEntityExtractor"
-  # url of the running duckling server
-    url: "http://localhost:8000"
-  # dimensions to extract
-    dimensions: ["time", "number", "amount-of-money", "distance". "email"]
-  # allows you to configure the locale, by default the language is
-  # used
-    locale: "de_DE"
-  # if not set the default timezone of Duckling is going to be used
-  # needed to calculate dates from relative expressions like "tomorrow"
-    timezone: "Europe/Berlin"
-  # Timeout for receiving response from http url of the running duckling server
-  # if not set the default timeout of duckling http url is set to 3 seconds.
-    timeout : 3
-
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies:
@@ -51,9 +36,6 @@ policies:
 # # See https://rasa.com/docs/rasa/policies for more information.
   - name: MemoizationPolicy
   - name: RulePolicy
-  - name: UnexpecTEDIntentPolicy
-    max_history: 5
-    epochs: 100
   - name: TEDPolicy
     max_history: 5
     epochs: 100

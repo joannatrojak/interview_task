@@ -36,4 +36,123 @@ stories:
   - action: utter_stores
   - intent: affirm 
   - action: utter_I_want_to_know_particular_store
-  - intent: store address 
+  - intent: store_location_one
+  - action: utter_store_location
+
+
+- story: store path no 
+  steps: 
+  - intent: store_location
+  - action: utter_stores
+  - intent: deny 
+  - action: utter_answer_to_deny
+
+
+- story: store hours
+  steps: 
+  - intent: store_hours
+  - action: utter_store_hours
+
+
+- story: job application user asks about job recrutation process
+  steps: 
+  - intent: job_application
+  - action: utter_job_application_menu
+  - intent: recrutation process
+  - action: utter_describe_recrutation_process
+
+- story: job application user asks about list of positions
+  steps: 
+    - intent: job_positions_list
+    - action: utter_show_list_positions_menu
+
+- story: javascript developer application yes 
+  steps: 
+    - intent: java_script_developer
+    - action: utter_javascript_requirements
+    - intent: affirm 
+    - action: utter_ask_for_email
+    - intent: user_email
+    - action: action_job_application
+
+- story: javascript developer application no 
+  steps: 
+    - intent: java_script_developer
+    - action: utter_javascript_requirements
+    - intent: deny 
+    - action: utter_answer_to_deny
+
+- story: book appointment 
+  steps: 
+    - intent: appointment
+    - action: utter_book_appointment_step_one
+    - intent: appointment_type
+    - action: action_book_appointment 
+    - intent: date_of_appointment
+    - action: action_date_of_appointment
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: store_location
+  - action: utter_stores
+  - intent: affirm
+  - action: utter_I_want_to_know_particular_store
+  - intent: store_location_one
+    entities:
+    - city: New York
+  - action: utter_store_location
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: job_application
+  - action: utter_job_application_menu
+  - intent: job_positions_list
+  - action: utter_show_list_positions_menu
+  - intent: java_script_developer
+  - action: utter_javascript_requirements
+  - intent: affirm
+  - action: utter_ask_for_email
+  - intent: user_email
+  - action: action_job_application
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: job_application
+  - action: utter_job_application_menu
+  - intent: job_positions_list
+  - action: utter_show_list_positions_menu
+  - intent: java_script_developer
+  - action: utter_javascript_requirements
+  - intent: affirm
+  - action: utter_ask_for_email
+  - intent: user_email
+    entities:
+    - email: example@example.com
+  - slot_was_set:
+    - email: example@example.com
+  - action: action_job_application
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: job_application
+  - action: utter_job_application_menu
+  - intent: job_positions_list
+  - action: utter_show_list_positions_menu
+  - intent: java_script_developer
+  - action: utter_javascript_requirements
+  - intent: affirm
+  - action: utter_ask_for_email
+  - intent: user_email
+    entities:
+    - email: example@example.com
+  - slot_was_set:
+    - email: example@example.com
+  - action: action_job_application

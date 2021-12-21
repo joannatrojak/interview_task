@@ -1,5 +1,4 @@
 version: "3.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -16,7 +15,6 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
 - intent: goodbye
   examples: |
     - cu
@@ -29,7 +27,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -38,7 +35,7 @@ nlu:
     - of course
     - that sounds good
     - correct
-
+    - Yes
 - intent: deny
   examples: |
     - no
@@ -48,7 +45,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -65,7 +61,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -82,44 +77,42 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
 - intent: store_location
-  examples: | 
+  examples: |
     - Where is store?
-    - Where is store located? 
-    - store location 
-    - Store location. 
-    - Where is the nearest store located? 
-    - Where can I find your stores? 
-    - Where do you have stores? 
-    - Where is shop? 
-    - Where is shop located? 
-    - shop location 
-    - Shop location. 
-    - Where is the nearest shop located? 
-    - Where can I find your shops? 
+    - Where is store located?
+    - store location
+    - Store location.
+    - Where is the nearest store located?
+    - Where can I find your stores?
+    - Where do you have stores?
+    - Where is shop?
+    - Where is shop located?
+    - shop location
+    - Shop location.
+    - Where is the nearest shop located?
+    - Where can I find your shops?
     - Where do you have shops?
 - intent: store_hours
-  examples: | 
-    - What are the store hours? 
-    - When are your stores opened? 
+  examples: |
+    - What are the store hours?
+    - When are your stores opened?
     - store hours
-    - Store hours. 
-    - What are the hours? 
-    - What are the shop hours? 
-    - When are your shops opened? 
-    - When can I visit you? 
-    - What is the best time to visit your store? 
-    - When do you work? 
+    - Store hours.
+    - What are the hours?
+    - What are the shop hours?
+    - When are your shops opened?
+    - When can I visit you?
+    - What is the best time to visit your store?
+    - When do you work?
 - intent: store_location_one
-  examples: | 
+  examples: |
     - [New York](city)
     - [Los Angeles](city)
     - [Chicago](city)
@@ -145,21 +138,72 @@ nlu:
     - [El Paso](city)
     - [Boston](city)
     - [Portland](city)
-
-
-
-
-
-- lookup: city
+- intent: job_application
+  examples: |
+    - Job application.
+    - job application
+    - Do you have open job positions?
+    - Do you hire people?
+    - Can I work for you?
+    - Can I apply for a job?
+- intent: recrutation process
+  examples: |
+    - recrutation process
+    - Recrutation process.
+    - What is the recrutation process?
+    - How long it takes to get the decision whether I am hired or not?
+    - How long is the recrutation process?
+    - How many steps does the recruitation process have?
+- intent: job_positions_list
+  examples: |
+    - Job position list
+    - Show me the list of current positions.
+    - What are the current job offers?
+    - What kind of people do you look for?
+    - What kind of specialists do you look for?
+    - What are the current positions?
+- intent: java_script_developer
+  examples: |
+    - java script developer
+    - javascript developer
+    - JavaScript Developer
+    - Do you look for Javascript developers?
+    - Do you need Javascript developers?
+    - Are there any positions available for Javascript developers?
+- intent: appointment
+  examples: |
+    - appointment
+    - I want to book an appointment.
+    - Book an appointment.
+    - I wish to book an appointment.
+    - Can I schedule an appointment?
+- intent: appointment_type
+  examples: |
+    - I want to collect my [online order](appointment_type).
+    - I want to return an item to the store and get a [refund](appointment_type).
+    - [Online_order](appointment_type).
+    - I want to get a [refund](type)
+- intent: user_email
+  examples: |
+    - [example@example.com](email)
+    - [jtrojak@gmail.com](email)
+    - [example@example.com](email)
+- intent: date_of_appointment
   examples: | 
+    - [Friday 11-01-2022](date)
+    - [Monday 31-09-2022](date)
+    - [Tuesday 12-03-2022](date)
+    - [Friday 13-05-2022](date)
+- lookup: city
+  examples: |
     - New York
     - Los Angeles
     - Chicago
     - Houston
     - Phoenix
     - Philadelphia
-    - San Antonio 
-    - San Diego 
+    - San Antonio
+    - San Diego
     - Dallas
     - San Jose
     - Austin
